@@ -49,7 +49,7 @@ p { margin: 0 0 1em; }
 .skip:focus { left: 16px; top: 16px; z-index: 99; background: var(--white); padding: 8px 14px; border-radius: 8px; }
 
 /* ---------- buttons ---------- */
-.btn {
+.btn { white-space: nowrap;
   display: inline-flex; align-items: center; gap: .5em;
   padding: .85em 1.6em; border-radius: 999px;
   font: 700 .95rem/1 var(--sans); letter-spacing: .02em; text-decoration: none;
@@ -86,7 +86,7 @@ p { margin: 0 0 1em; }
 .menu-toggle { display: none; background: none; border: 0; padding: 10px; cursor: pointer; color: var(--brown-deep); }
 .menu-toggle svg { width: 28px; height: 28px; }
 
-@media (max-width: 920px) {
+@media (max-width: 1080px) {
   .menu-toggle { display: block; }
   .nav { position: absolute; inset: 100% 0 auto 0; flex-direction: column; align-items: stretch; gap: 0;
     background: var(--cream); border-bottom: 1px solid var(--sand); padding: 8px 16px 20px; display: none; }
