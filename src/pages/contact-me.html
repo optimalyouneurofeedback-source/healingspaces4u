@@ -1,0 +1,95 @@
+<!--
+title: Contact | Free 15-Minute Consult | Healing Spaces, Gresham OR
+description: Request a free 15-minute consultation with Sarita E. Trawick, LCSW. Therapy and EMDR in Gresham, Oregon and by telehealth. Call 503-688-3802.
+path: /contact-me
+nav: contact
+image: /images/office-waiting-room.jpg
+-->
+<section class="page-hero">
+  <svg class="sprig l" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="sprig r" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Find a space of healing and peace</h1>
+    <p class="lead">Request a free 15-minute consultation. I'll get back to you within two business days.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <form class="contact-form" action="https://formspree.io/f/xeaegyrd" method="POST">
+      <input type="hidden" name="_subject" value="New consult request from healingspaces4u.com">
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+      </div>
+      <fieldset class="field">
+        <legend>I'm interested in</legend>
+        <div class="choices">
+          <label><input type="radio" name="interest" value="Therapy" checked> Therapy</label>
+          <label><input type="radio" name="interest" value="EMDR"> EMDR</label>
+          <label><input type="radio" name="interest" value="Neurofeedback"> Neurofeedback</label>
+          <label><input type="radio" name="interest" value="Not sure yet"> Not sure yet</label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>Consult preference</legend>
+        <div class="choices">
+          <label><input type="radio" name="consult" value="Phone" checked> Phone</label>
+          <label><input type="radio" name="consult" value="Telehealth video"> Video</label>
+          <label><input type="radio" name="consult" value="In person"> In person</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="message">A little about what you're looking for</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <p class="hint">Please keep it brief and leave out private health details. We'll talk about those during your consult.</p>
+      </div>
+      <button class="btn" type="submit">Send request</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <aside class="contact-info">
+      <div class="info-card">
+        <h2>Visit</h2>
+        <p>2951 NW Division St, Ste 101<br>Gresham, OR 97030</p>
+        <p><a class="text-link" href="https://maps.google.com/?q=2951+NW+Division+St+Ste+101,+Gresham,+OR+97030" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+      <div class="info-card">
+        <h2>Hours</h2>
+        <p>Monday – Thursday<br>8:00 AM – 4:00 PM</p>
+      </div>
+      <div class="info-card">
+        <h2>Reach me</h2>
+        <p><a href="tel:+15036883802">503-688-3802</a><br><a href="mailto:healingspaces4u@gmail.com">healingspaces4u@gmail.com</a></p>
+      </div>
+      <p class="policy">No-shows or cancellations with less than 24 hours' notice for consults and first appointments may not be rescheduled, except at my discretion.</p>
+      <p class="policy"><strong>In crisis?</strong> Call or text <a href="tel:988">988</a>, or call 911. This form is not monitored for emergencies.</p>
+    </aside>
+  </div>
+</section>
+
+<script>
+  // Send without leaving the page; falls back to a normal form post if JavaScript is off.
+  const f = document.querySelector('.contact-form'), s = f.querySelector('.form-status');
+  f.addEventListener('submit', async e => {
+    e.preventDefault(); s.textContent = 'Sending…';
+    try {
+      const r = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } });
+      if (!r.ok) throw 0;
+      f.reset(); s.textContent = 'Thank you. Your request was sent, and I\'ll be in touch within two business days.';
+    } catch { s.textContent = 'Sorry, something went wrong. Please call 503-688-3802 or email healingspaces4u@gmail.com.'; }
+  });
+</script>

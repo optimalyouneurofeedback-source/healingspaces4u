@@ -1,0 +1,4 @@
+# Local-only working files (not published)
+source-images/
+PROJECT-BRIEF.md
+*.tmp
