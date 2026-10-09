@@ -3,3 +3,4 @@ source-images/
 PROJECT-BRIEF.md
 *.tmp
 /downloads/
+/docs/_preview*
