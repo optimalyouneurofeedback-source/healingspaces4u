@@ -315,7 +315,9 @@ section { padding: clamp(64px, 9vw, 112px) 0; position: relative; }
 .book .buy { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .book .price { font: 600 1.4rem var(--serif); color: var(--brown-deep); }
 .book .btn { padding: .65em 1.1em; font-size: .88rem; }
-.callout { background: var(--sage-soft); border-radius: var(--radius); padding: 22px 26px; color: #3f4b30; max-width: 760px; margin: 0 auto 40px; text-align: center; }
+.book audio { width: 100%; margin-top: auto; }
+.book .body > .btn { align-self: flex-start; margin-top: auto; }
+.callout {background: var(--sage-soft); border-radius: var(--radius); padding: 22px 26px; color: #3f4b30; max-width: 760px; margin: 0 auto 40px; text-align: center; }
 .callout p { margin: 0; }
 
 /* insurance */

@@ -14,7 +14,7 @@ $root = Split-Path $PSScriptRoot -Parent
 $src = Join-Path $root 'src\pages'; $out = Join-Path $root 'docs'
 $layout = [IO.File]::ReadAllText((Join-Path $root 'src\_layout.html'))
 $utf8 = New-Object Text.UTF8Encoding($false)
-$navs = 'about','neurofeedback','writings','insurance','blog','contact'
+$navs = 'about','neurofeedback','resources','insurance','blog','contact'
 
 Get-ChildItem $src -Recurse -Filter *.html | ForEach-Object {
   $raw = [IO.File]::ReadAllText($_.FullName)
