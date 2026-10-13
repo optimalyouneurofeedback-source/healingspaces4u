@@ -364,3 +364,6 @@ section { padding: clamp(64px, 9vw, 112px) 0; position: relative; }
   .card { padding: 28px 22px 24px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Keep faces in frame when square photos are cropped to wide shapes */
+img[src$="/self-empathy.jpg"] { object-position: center 18%; }
