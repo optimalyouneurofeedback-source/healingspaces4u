@@ -253,10 +253,11 @@ section { padding: clamp(64px, 9vw, 112px) 0; position: relative; }
 .contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
 .field { margin: 0 0 20px; border: 0; padding: 0; min-width: 0; }
 .field label, .field legend { display: block; font-weight: 700; font-size: .95rem; margin-bottom: 6px; color: var(--ink); padding: 0; }
-.field input[type=text], .field input[type=email], .field input[type=tel], .field textarea {
+.field input[type=text], .field input[type=email], .field input[type=tel], .field textarea, .field select {
   width: 100%; font: inherit; color: var(--ink); background: var(--cream); border: 1.5px solid var(--sand); border-radius: 12px; padding: .7em .9em; }
 .field textarea { resize: vertical; }
-.field input:focus, .field textarea:focus { outline: none; border-color: var(--coral); box-shadow: 0 0 0 4px var(--coral-soft); }
+.field select { appearance: none; cursor: pointer; padding-right: 2.6em; background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27%3E%3Cpath d=%27M1 1.5l5 5 5-5%27 fill=%27none%27 stroke=%27%237a5a45%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1em center; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--coral); box-shadow: 0 0 0 4px var(--coral-soft); }
 .choices { display: flex; flex-wrap: wrap; gap: 8px; }
 .choices label { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: .95rem; background: var(--cream); border: 1.5px solid var(--sand);
   border-radius: 999px; padding: .4em 1em; margin: 0; cursor: pointer; }
